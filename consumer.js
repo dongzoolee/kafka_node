@@ -2,10 +2,9 @@ const kafka = require('kafka-node');
 const Consumer = kafka.Consumer;
 const Offset = kafka.Offset;
 const Client = kafka.KafkaClient;
-const topic = 'kafka_test';
 
 let client = new Client({ kafkaHost: '49.247.23.18:9092' });
-let topics = [{ topic: topic }];
+let topics = [{ topic: 'kafka_test'}];
 let options = { autoCommit: false, fetchMaxWaitMs: 1000, fetchMaxBytes: 1024 * 1024 };
 
 let consumer = new Consumer(client, topics, options);

@@ -7,6 +7,7 @@ let km = new KeyedMessage('key', 'msg');
 const payloads = [
     {
         topic: 'kafka_test',
+        // partition: 1,
         messages: JSON.stringify({
             id: 'nant0313',
             pw: 'soganghigh'
